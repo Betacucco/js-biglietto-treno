@@ -1,5 +1,5 @@
 const pariDispari = prompt("Inserire pari o dispari");
-const numero = prompt("Inserire un numero da 1 a 9");
+const numero = Number(prompt("Inserire un numero da 1 a 9"));
 
 let pariDispari2 = null;
 let numeroCasuale = Math.floor(Math.random() * 10);
@@ -18,7 +18,7 @@ switch (pariDispari){
     alert("Il valore inserito non e' valido");
 }
 
-if(isNaN(numero) || numero < 1 || numero > 9){
+if(numero < 1 || numero > 9){
     alert("Il numero inserito non e valido");
 } else {
     let somma = (numero + numeroCasuale);
