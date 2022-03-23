@@ -1,6 +1,7 @@
+//Dichiaro le variabili
 const eta1 = prompt("Inserire eta prima persona");
 const eta2 = prompt("Inserire eta seconda persona");
-
+//Controllo se le eta inserite sono numeri
 if(isNaN(eta1) || isNaN(eta2)){
     alert("Inserire valore numerico");
 } else {

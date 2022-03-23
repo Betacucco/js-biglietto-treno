@@ -1,29 +1,27 @@
+//Mi dichiaro le variabili
 const pariDispari = prompt("Inserire pari o dispari");
-const numero = Number(prompt("Inserire un numero da 1 a 9"));
-
-let pariDispari2 = null;
-let numeroCasuale = Math.floor(Math.random() * 10);
-console.log(numeroCasuale);
-
+const numero = parseInt(prompt("Inserire un numero da 1 a 9"));
+console.log("Il numero inserito dall'utente e': " + numero);
+//Genero il numero casuale e faccio la somma tra i due numeri
+let numeroCasuale = Math.floor((Math.random() * 9) + 1);
+console.log("Il numero del computer e': " + numeroCasuale);
+let somma = (numero + numeroCasuale);
+console.log("La somma tra i due numeri e': " + somma);
+//Controllo se l'utente inserisce pari o dispari
 switch (pariDispari){
     case "pari":
-    pariDispari2 = true;
     break;
 
     case "dispari":
-    pariDispari2 = false;
     break;
 
     default:
     alert("Il valore inserito non e' valido");
 }
-
+//Controllo se il nuemro inserito e' maggiore di 1 e minore di 9
 if(numero < 1 || numero > 9){
     alert("Il numero inserito non e valido");
 } else {
-    let somma = (numero + numeroCasuale);
-    console.log(somma);
-
     if(somma % 2 == 0 && pariDispari == "pari"){
         document.writeln("La somma e' pari ed ha vinto il giocatore");
     } else if(somma % 2 == 0 && pariDispari == "dispari"){
